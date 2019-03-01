@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Update Css with Js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"  href="main.css">
+</head>
+<body>
+    <h2>Update CSS with <span class="h1">JS</span></h2>
+    <div class="controls">
+
+        <label for="spacing">Spacing</label>
+        <input type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+        <label for="blur">Blur</label>
+        <input type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+
+        <label for="Base">Base</label>
+        <input type="color" name="base" value="#0000ff">
+
+    </div>
+
+    <img src="https://images.adsttc.com/media/images/535e/d573/c07a/80a2/5900/001d/large_jpg/2._MAD_12003_Chaoyang_Park_Plaza_i_02_overview_with_city_context.jpg?1398723916" alt="hi">
+    
+<script>
+    const inputs = document.querySelectorAll('.controls input');
+
+    function handleUpdate(){
+       const suffix = this.dataset.sizing || '';
+       document.documentElement.style.setProperty(`--${this.name}`,this.value+ suffix);
+       
+    }
+
+    inputs.forEach( input => input.addEventListener('change', handleUpdate));
+    inputs.forEach( input => input.addEventListener('mousemove', handleUpdate));
+
+
+
+</script>
+</body>
+</html>
