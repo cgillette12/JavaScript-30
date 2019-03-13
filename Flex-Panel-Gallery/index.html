@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Flex image Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    
+</head>
+<body>
+    <div class="panels">
+        <div class="panel panel-1">
+            <p>Hey</p>
+            <p class="middle">Let's</p>
+            <p>Dance</p>
+        </div>
+        <div class="panel panel-2">
+            <p>Give</p>
+            <p class="middle">Take</p>
+            <p>Recive</p>
+        </div>
+        <div class="panel panel-3">
+            <p>Experience</p>
+            <p class="middle">It</p>
+            <p>Today</p>
+        </div>
+        <div class="panel panel-4">
+            <p>Give</p>
+            <p class="middle">All</p>
+            <p>You Can</p>
+        </div>
+        <div class="panel panel-5">
+            <p>Live</p>
+            <p class="middle">In</p>
+            <p>Moments</p>
+        </div>
+           
+    </div>
+    <script>
+        const panels = document.querySelectorAll('.panel');
+
+        function toggleOpen(){
+            this.classList.toggle('open')
+            this.classList.toggle('open-active')
+        }
+        
+        panels.forEach(panel => panel.addEventListener('click',toggleOpen))
+
+
+    </script>    
+</body>
+</html>
